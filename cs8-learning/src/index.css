@@ -20,6 +20,7 @@
   color: #F5CD78;
 }
 
+
 .navbar a{
   align-items: center;
   margin-left: 16px;
@@ -38,6 +39,7 @@
   padding: 6px;
 }
 
+
 .login-form{
   display: flexbox;
   max-width: 600px;
@@ -49,11 +51,26 @@
 .about-page{
 
   display: flexbox;
-  width: auto;
-  margin: 20px;
+  max-width: 900px;
+  margin: 20px auto ;
   border: #666;
   align-items: center;
 
+}
+.abt-btn{
+  color: #f2f2f2;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  background-color: #DEC362;
+  border: none;
+  border-radius: 5px;
+}
+header{
+  margin-top: 20px;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 500;
 }
 .container{
   border: 1px solid #DEC362;
