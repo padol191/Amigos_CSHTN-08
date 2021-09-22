@@ -4,12 +4,14 @@ import Login from './Login';
 import Signup from './Signup';
 import Info from './Info';
 
+
 function App() {
   return (
     <div>
+      
       <Navbar />
-      <Login />
-      <Signup />
+{/*       <Login />*/}
+      <Signup /> 
       <Info />
     </div>
      

@@ -46,6 +46,15 @@
   align-items: center;
 }
 
+.about-page{
+
+  display: flexbox;
+  width: auto;
+  margin: 20px;
+  border: #666;
+  align-items: center;
+
+}
 .container{
   border: 1px solid #DEC362;
   border-radius: 10px;
