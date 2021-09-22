@@ -19,8 +19,8 @@ function App() {
             <Route path= "/login" exact component={Login}/>
           </Switch>
         </Router>
-      </div>)
-
+      </div>
+      );
   }
   
   return (
@@ -29,8 +29,7 @@ function App() {
      <ReactRouter/>
     </React.Fragment>
        
-
-   
+  
   );
 }
 

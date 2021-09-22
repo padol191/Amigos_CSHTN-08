@@ -3,30 +3,35 @@ const Techs = () => {
     return (
         <div>
             <div className="tech-list">
-                <button>
-                HTML + CSS
-                </button>
-                <button>
-                JAVASCRIPT
-                </button>
-                <button>
-                GIT
-                </button>
-                <button>
-                DATABASES
-                </button>
-                <button>
-                RUBY
-                </button>
-                <button>
-                NODEJS
-                </button>
+                <center>
+                    <button className='tech-button'>
+                    HTML + CSS
+                    </button>
+                    <button className='tech-button'>
+                    JAVASCRIPT
+                    </button>
+                    <button className='tech-button'>
+                    GIT
+                    </button>
+                    <button className='tech-button'>
+                    DATABASES
+                    </button>
+                    <button className='tech-button'>
+                    RUBY
+                    </button>
+                    <button className='tech-button'>
+                    NODEJS
+                    </button>
+                </center>    
             </div>
-            <div className="tech-list">
-                <button className='get-started'>
-                    Get Started
-                </button>
-            </div>
+            <center>
+                <div className="tech-list">
+                    <button className='get-started'>
+                        Get Started
+                    </button>
+                </div>
+            </center>
+            
         </div>
         
         
