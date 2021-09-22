@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const REGISTER_URL='http://localhost:5000/api/users/';
+const LOG_URL='http://localhost:5000/api/auth/';
 
 const SignUp=()=> {
 
@@ -42,12 +43,28 @@ const SignUp=()=> {
         password : password,
         cpassword: cpassword
     };
+   
     console.log(data);
   axios.post( REGISTER_URL,data)
-  .then(res=>console.log(res.data.token))
+  .then(res=>{
+    console.log(res.data.token);
+    const body = {
+      email: email,
+      password : password
+    };
+
+    axios.get(LOG_URL,{
+      headers: {
+        'x-auth-token': res.data.token
+      }
+    })
+    .then(res2=>{console.log(res2)})
+    window.localStorage.setItem('key',  res.data.token)
+  
+  })
   .catch(err=>console.log(err))
   
-  console.log(data);
+ 
   setName('');
   setEmail('');
   setPassword('');

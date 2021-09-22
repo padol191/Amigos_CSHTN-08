@@ -22,12 +22,12 @@ const Login=()=> {
       }
       const dataHandler=(event)=>{
         event.preventDefault();
-    const data=
+    const data=JSON.stringify(
     {        
         email: email,
         password : password
         
-    };
+    });
   
   console.log(data);
   axios.post( LOG_URL,data)

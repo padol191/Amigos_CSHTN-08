@@ -1,10 +1,11 @@
+
 import React from 'react';
 import Login from './Components/Authentication/Login';
 import SignUp from './Components/Authentication/SignUp';
 import Home from './Components/HomeUI/Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import './App.css';
+
 
 function App() {
   const ReactRouter=()=>{
@@ -22,10 +23,13 @@ function App() {
   }
   
   return (
+
     <React.Fragment>
      <ReactRouter/>
     </React.Fragment>
        
+
+   
   );
 }
 
