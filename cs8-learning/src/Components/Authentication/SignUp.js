@@ -94,14 +94,17 @@ const SignUp=()=> {
         <div className="signup-form">
             <div className="container">
                 <h2>Sign Up</h2>
-                <input type="text" placeholder="Name" value ={name} onChange={NameChangeHandler}/>
-                <input type="email" placeholder="Email" value ={email}onChange={EmailChangeHandler}/>
-                <input type="password" placeholder="Password (at least 6 characters)" value={password} onChange={PasswordChangeHandler}/>
-                <input type="password" placeholder="Confirm Password" value={cpassword} onChange={CPasswordChangeHandler} />
+                <input type="text" required placeholder="Name" value ={name} onChange={NameChangeHandler}/>
+                <input type="email" required placeholder="Email" value ={email}onChange={EmailChangeHandler}/>
+                <input type="password" required placeholder="Password (at least 6 characters)" value={password} onChange={PasswordChangeHandler}/>
+                <input type="password" required placeholder="Confirm Password" value={cpassword} onChange={CPasswordChangeHandler} />
                 <button type='submit'>Sign Up</button>
-                <Link to ='/login'>
-                <a><h3>Already a member?</h3></a>
-                </Link>
+                <div className="member-link">
+                  <Link to ='/login'>
+                    <a>Already a member?</a>
+                  </Link>
+                </div>
+                
             </div>
             
         </div>

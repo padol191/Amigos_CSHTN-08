@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 
+
 function App() {
   const ReactRouter=()=>{
     return(
@@ -18,8 +19,8 @@ function App() {
             <Route path= "/login" exact component={Login}/>
           </Switch>
         </Router>
-      </div>)
-
+      </div>
+      );
   }
   
   return (
@@ -28,8 +29,7 @@ function App() {
      <ReactRouter/>
     </React.Fragment>
        
-
-   
+  
   );
 }
 

@@ -17,8 +17,11 @@ const Login=()=> {
       }
 
     const PasswordChangeHandler = (event)=>{
+      if(event.target.value.match('^.{6,}') != null)  
+      {
         setPassword(event.target.value);
-        
+      }
+
       }
       const dataHandler=(event)=>{
         event.preventDefault();
@@ -62,13 +65,16 @@ const Login=()=> {
             <h2>
                 Login
             </h2>
-            <input type="email" placeholder="Email" value={email} onChange={EmailChangeHandler}/>
+            <input type="email" required  placeholder="Email" value={email} onChange={EmailChangeHandler}/>
             
-            <input type="password" value={password} onChange={PasswordChangeHandler} placeholder="Password (at least 6 characters)" />
+            <input type="password" pattern= "^.{6,}" value={password} onChange={PasswordChangeHandler} required  placeholder="Password (at least 6 characters)" />
             <button type='submit'>Login</button>
-            <Link to ='/signup'>
-            <a><h3>New member?</h3></a>
-            </Link>
+            <div className="signup-link">
+              <Link to ='/signup'>
+                <a>New Member ?</a>
+              </Link>
+            </div>
+            
         </div>
         
     </div>

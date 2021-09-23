@@ -66,15 +66,32 @@
   }
   
   .login-form button{
-    color: #f2f2f2;
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #DEC362;
+    margin-top: 5px;
     border: none;
     border-radius: 5px;
+    width: fit-content;
+    background-color: #DEC362;
+    color: #f2f2f2;
+    font-size: 16px;
+    padding: 8px 16px;
+    box-shadow: 0px 1px 2px #9c9a91;
   }
   
   .login-form button:hover{
-    background-color:#caad44;
-    color: #fff;
+    box-shadow: inset 0px 2px 3px #9c9a91;
+  }
+
+  .signup-link{
+    padding-top: 10px;
+  }
+
+  .signup-link a{
+    padding-left: 1px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #666;
+  }
+
+  .signup-link a:hover{
+    font-weight: 500;
   }
