@@ -26,13 +26,13 @@ const ForumDiscussion = () => {
                 <button className='fd-button' style={{marginRight:'5px',
                             marginTop:'10px'}}>
                         <FaAngleDoubleUp style={{
-                            fontSize:"20px",
+                            fontSize:"16px",
                         }}/> 
                         <p>99</p>
                     </button>
                     <button className='fd-button'>
                         <FaComments style={{
-                            fontSize:"20px",
+                            fontSize:"16px",
                         }}/> 
                         <p>99</p>
                     </button>
@@ -53,13 +53,13 @@ const ForumDiscussion = () => {
                     <button className='fd-button' style={{marginRight:'5px',
                             marginTop:'10px'}}>
                         <FaAngleDoubleUp style={{
-                            fontSize:"20px",
+                            fontSize:"16px",
                         }}/> 
                         <p>99</p>
                     </button>
                     <button className='fd-button'>
                         <FaComments style={{
-                            fontSize:"20px",
+                            fontSize:"16px",
                         }}/> 
                         <p>99</p>
                     </button>

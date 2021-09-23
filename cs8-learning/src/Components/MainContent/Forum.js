@@ -18,14 +18,14 @@ const Forum = () => {
                     </span>
                     <p className="author">By John Doe</p>
                     <p style={{float:'left'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel sunt officiis praesentium quasi sapiente quo dignissimos. Illo commodi consequatur error repellat deleniti saepe vero quaerat modi doloribus, asperiores beatae.</p>
-                    <button style={{marginRight:'5px',
+                    <button className='forum-button' style={{marginRight:'5px',
                             marginTop:'10px'}}>
                         <FaAngleDoubleUp style={{
                             fontSize:"20px",
                         }}/> 
                         <p>99</p>
                     </button>
-                    <button>
+                    <button className='forum-button'>
                         <FaComments style={{
                             fontSize:"20px",
                         }}/> 
@@ -39,14 +39,14 @@ const Forum = () => {
                     </span>
                     <p className="author">By John Doe</p>
                     <p style={{float:'left'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel sunt officiis praesentium quasi sapiente quo dignissimos. Illo commodi consequatur error repellat deleniti saepe vero quaerat modi doloribus, asperiores beatae.</p>
-                    <button style={{marginRight:'5px',
+                    <button className='forum-button' style={{marginRight:'5px',
                             marginTop:'10px'}}>
                         <FaAngleDoubleUp style={{
                             fontSize:"20px",
                         }}/> 
                         <p>99</p>
                     </button>
-                    <button>
+                    <button className='forum-button'>
                         <FaComments style={{
                             fontSize:"20px",
                         }}/> 

@@ -16,7 +16,7 @@
     margin-bottom: 20px;
 }
 
-button{
+.forum-button{
     margin: 0;
     border: none;
     border-radius: 5px;
@@ -27,7 +27,7 @@ button{
     box-shadow: 0px 1px 2px #9c9a91;
 }
 
-button:hover {
+.forum-button:hover {
     box-shadow: inset 0px 2px 3px #9c9a91;
 }
 
