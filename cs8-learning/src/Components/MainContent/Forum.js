@@ -5,11 +5,13 @@ const Forum = () => {
     let iconStyles = { color: "black" };
     return ( 
         <div className="forum">
-            <center>
+            
             <div className="heading">
-                <h1>Forums</h1>
+                <h1>Forums</h1>   
+                <button >Create Discussion</button>
             </div>
-            </center>
+            
+
             <div className="forum-list">
                 <div className="content">   
                     <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/43675/white-circle-emoji-clipart-xl.png" width = '80px' style={{display:'inline', float:'left'}} alt="" />
