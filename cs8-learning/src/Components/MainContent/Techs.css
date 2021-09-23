@@ -2,29 +2,38 @@
     display: flexbox;
     justify-content: space-between;
     padding-top: 5%;
-    max-width: 70%;
+    max-width: 80%;
     margin: auto;
 }
 
-button {
+.tech-button {
+    min-width: 250px;
     border-radius: 5px;
-    font-size: 28px;
+    font-size: 36px;
     margin: 10px;
     border: none;
-    padding: 6% 8%;
+    padding: 20px 20px;
     color: #f2f2f2;
     background-color: #c5ad58;
     box-shadow: 0px 5px 8px #9c9a91;
 }
-button:hover {
+.tech-list button:hover {
     box-shadow: inset 0px 5px 8px #746a42;
 }
 
 .get-started {
+    min-width: 250px;
+    border-radius: 5px;
+    font-size: 36px;
+    margin: 10px;
+    border: none;
+    padding: 20px 20px;
     color: #c5ad58;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #fff;
+    font-weight: 600;
     box-shadow: 0px 5px 8px #9c9a91;
+}
+
+.get-started button:hover{
+    box-shadow: inset 0px 5pxpx #746a42;
 }

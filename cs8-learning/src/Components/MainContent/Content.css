@@ -1,4 +1,4 @@
-course-content{
+.course-content{
     padding-top: 5%;
     max-width: 70%;
     margin: auto;
@@ -7,6 +7,7 @@ course-content{
 .course-content h1{
     font-size: 250%;
     font-weight: 900;
+
 }
 
 .content{
@@ -16,8 +17,9 @@ course-content{
 
 .sub-topic{
     border-radius: 4px;
-    margin: 20px 0;
-    padding: 10%;
+    margin: auto;
+    padding: 5%;
+    margin: 3% 0;
     box-shadow: 0px 5px 10px #9c9a91;
 }
 
