@@ -14,6 +14,12 @@ const SignUp=()=> {
     const [email, setEmail]= useState('');
     const [password, setPassword]= useState('');
     const [cpassword, setcPassword]= useState('');
+    const [keyInLocal, setKey]= useState('false');
+
+    const LoginChangeHandler = ()=>{
+      setKey('true');
+      
+    };
 
     const NameChangeHandler = (event)=>{
         setName(event.target.value);
@@ -47,7 +53,10 @@ const SignUp=()=> {
     console.log(data);
   axios.post( REGISTER_URL,data)
   .then(res=>{
+    console.log(res.data);
     console.log(res.data.token);
+    
+
     const body = {
       email: email,
       password : password
@@ -58,11 +67,16 @@ const SignUp=()=> {
         'x-auth-token': res.data.token
       }
     })
-    .then(res2=>{console.log(res2)})
-    window.localStorage.setItem('key',  res.data.token)
+    .then(res2=>{
+      const demo=res2.data;
+      console.log(demo);
+       const id =demo[Object.keys(demo)[0]];
+       window.localStorage.setItem('id', id);
+      })
+    
   
   })
-  .catch(err=>console.log(err))
+  .catch(err=>console.log(err.data))
   
  
   setName('');
