@@ -22,7 +22,7 @@ const Login=()=> {
       }
       const dataHandler=(event)=>{
         event.preventDefault();
-    const data=JSON.stringify(
+    const data=(
     {        
         email: email,
         password : password
@@ -31,8 +31,21 @@ const Login=()=> {
   
   console.log(data);
   axios.post( LOG_URL,data)
-  .then(res=>console.log(res.data.token))
-  .catch(err=>console.log(err))
+  .then(res=>{console.log(res.data.token)
+  
+  axios.get(LOG_URL,{
+    headers: {
+      'x-auth-token': res.data.token
+    }
+  })
+  .then(res2=>{
+    const demo=res2.data;
+    console.log(demo);
+     
+     
+    })}
+  )
+  .catch(errors=>console.log("errors"))
 
  
   setEmail('');
