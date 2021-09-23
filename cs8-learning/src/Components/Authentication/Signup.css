@@ -6,42 +6,9 @@
   color: #666;
 }
 
-.navbar {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    border-bottom: 1px solid #f2f2f2 ;
-  }
-  
-  .navbar h1 {
-    font-weight: 900;
-    color: #F5CD78;
-  }
-  
-  .navbar a{
-    align-items: center;
-    margin-left: 16px;
-    text-decoration: none;
-    padding: 6px;
-  }
-  
-  .navbar a:hover {
-    border-radius: 3px;
-    color: #DEC362;
-    background-color: #f2f2f2;
-    font-weight: 600;
-    align-items: center;
-    margin-left: 16px;
-    text-decoration: none;
-    padding: 6px;
-  }
-
-
 .signup-form{
     display: flexbox;
-    max-width: 600px;
+    max-width: 70%;
     margin: 40px auto;
     border: #666;
     align-items: center;
