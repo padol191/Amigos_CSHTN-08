@@ -21,9 +21,13 @@ const TopicSchema = new Schema({
       body: {
         type: String,
       },
-      links: {
-        type: String,
-      },
+      links: [
+        {
+          url: {
+            type: String,
+          },
+        },
+      ],
       fileUrl: {
         type: String,
       },
