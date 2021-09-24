@@ -25,6 +25,7 @@ function App() {
       <React.Fragment>
         <div className="auth">
           <Switch>
+            
             <Route path="/" exact component={Home} />
             <SignRoute path="/signup" component={SignUp} isLoggedin={value} />
             <SignRoute path="/login" component={Login} isLoggedin={value} />
@@ -62,26 +63,6 @@ function App() {
             <ProtectedRoute path="/ruby" component={Ruby} isLoggedin={value} />
             <Redirect to="/" />
           </Switch>
-        </div>
-      </React.Fragment>
-      <React.Fragment>
-        <div className="auth">
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/login" component={Login} />
-            <Route path="/techs" component={Techs} />
-            <Route path="/forums" component={Forum} />
-            <Route path="/react" component={ReactInfo} />
-            <Route path="/express" component={Express} />
-            <Route path="/git" component={Gits} />
-            <Route path="/nodejs" component={NodejsInfo} />
-            <Route path="/databases" component={DatabasesInfo} />
-            <Route path="/ruby" component={Ruby} />
-            <Redirect to="/" />
-          </Switch>
-
           <Footer />
         </div>
       </React.Fragment>

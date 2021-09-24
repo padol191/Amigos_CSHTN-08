@@ -1,0 +1,35 @@
+.subtopic-details{
+    width: 70%;
+    margin: auto;
+}
+
+.subtopic-details h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.subtopic-details p{
+    margin-bottom: 20px;
+}
+.subtopic-details img{
+    width: 80%;
+}
+
+.additional-resources{
+    display: flex;
+    flex-direction: column;
+}
+.additional-resources h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.additional-resources a{
+    width: fit-content;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.additional-resources a:hover{
+    text-decoration: underline;
+}

@@ -3,7 +3,7 @@ import './Quiz.css';
 const Quiz = () => {
     const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'What is the capital of France?loremloWhat is the capital of France?loremloWhat is the capital of France?loremloWhat is the capital of France?loremloWhat is the capital of France?loremlo',
 			answerOptions: [
 				{ answerText: 'New York', isCorrect: false },
 				{ answerText: 'London', isCorrect: false },
@@ -49,15 +49,16 @@ const Quiz = () => {
 	const [correct, setCorrect] = useState('');
 
 	const handleAnswerOptionClick = (isCorrect) => {
+		setDisable(true);
 		if (isCorrect) {
 			setScore(score + 1);
             setAnswer("Correct!")
 			setCorrect('');
-			setDisable(true);
+			
 		}
         else{
             let correct_ans = '';
-            for(let i=0 ; i<4 ; i++){
+            for(let i = 0; i < 4; i++){
                 if(questions[currentQuestion].answerOptions[i].isCorrect){
                     correct_ans = questions[currentQuestion].answerOptions[i].answerText;
 					setAnswer("Wrong");
@@ -89,7 +90,7 @@ const Quiz = () => {
 		}
     }
     return (  
-        <div className='app'>
+        <div className='quiz-main'>
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
@@ -108,8 +109,10 @@ const Quiz = () => {
 						<br/>
 						{correct}
 						</div>
-                        <button className="next-btn" onClick={() => handleNextOption()}>Next Question</button>
-    
+						<div className='next-btn-div'>
+						<button className="next-btn" onClick={() => handleNextOption()}>Next Question</button>
+						</div>
+                        
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
