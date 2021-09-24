@@ -27,6 +27,7 @@ function App() {
         <div className="auth">
           <Navbar/>
           <Switch>
+            
             <Route path="/" exact component={Home} />
             <Route path="/signup" component={SignUp} isLoggedin={value} />
             <Route path="/login" component={Login} isLoggedin={value} />
@@ -66,9 +67,8 @@ function App() {
             <ProtectedRoute path="/ruby" component={Ruby} isLoggedin={value} />
             <Redirect to="/" />
           </Switch>
+          <Footer />
         </div>
-        <Footer />
-
       </React.Fragment>
       
   </BrowserRouter>
