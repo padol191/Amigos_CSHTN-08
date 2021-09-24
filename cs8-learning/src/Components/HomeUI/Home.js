@@ -7,7 +7,7 @@ const Home=()=> {
     return (
       <div>
         <div style={{height:'100%'}}>
-        <Info />
+          <Info />
         </div>
       </div>
     );

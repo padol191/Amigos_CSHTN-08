@@ -26,35 +26,34 @@
 .link-item2{
     font-size: clamp(1rem, -0.875rem + 5.5vw, 1.2rem);
     font-weight: 500;
-    width: 60px;
+    width: fit-content;
     flex-grow: 1;
 }
 .link-item3{
     font-weight: 500;
     font-size: clamp(1rem, -0.875rem + 5.5vw, 1.2rem);
-    width: 60px;
+    width: fit-content;
     flex-grow: 1;
 }
 .link-item4{
     font-weight: 500;
-    
-    width: 60px;
+    font-size: clamp(1rem, -0.875rem + 5.5vw, 1.2rem);
+    width: fit-content;
     flex-grow: 1;
-    border-radius: 3px;
 }
 
-.link-item4 button{
+/* .link-item4{
     font-size: clamp(1rem, -0.875rem + 5.5vw, 1.2rem);
     border: none;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
     font-weight: 500;
-    /* border-radius: 5px;
+    border-radius: 5px;
     background-color: #DEC362;
     color: #f2f2f2;
     font-size: 16px;
     padding: 8px 16px;
-    box-shadow: 0px 1px 2px #9c9a91; */
-}
+    box-shadow: 0px 1px 2px #9c9a91;
+} */
 
 .link-item4 button:hover {
     /* box-shadow: inset 0px 2px 3px #9c9a91; */
