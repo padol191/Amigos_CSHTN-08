@@ -5,7 +5,7 @@ const Footer = () => {
         <div className='footer-style'>
             <footer>
                 <div className="footer-content">
-                    <p>© 2021 AppName</p>
+                    <p>© 2021 EduScript</p>
                 </div>
             </footer>
         </div>
