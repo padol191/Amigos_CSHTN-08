@@ -13,6 +13,8 @@ import NodejsInfo from './Components/Subjects/NodejsInfo';
 import Ruby from './Components/Subjects/Ruby';
 
 import {Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
+import Navbar from './Components/HomeUI/Navbar';
+import Footer from './Components/HomeUI/Footer';
 
 
 
@@ -26,7 +28,7 @@ function App() {
     <React.Fragment>
      <div className="auth">
       
-      
+     <Navbar />
         <Switch>
           <Route path= "/" exact component={Home}/>
           <Route path= "/signup" component={SignUp}/>
@@ -41,6 +43,8 @@ function App() {
           <Route path= "/ruby" component={Ruby}/>
           <Redirect to="/"/>
         </Switch>
+  
+        <Footer />
       
   
     </div>

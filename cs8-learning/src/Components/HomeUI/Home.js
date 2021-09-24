@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 const Home=()=> {
     return (
       <div style={{height:'100%'}}>
-        <NavBar/>
         <Info />
-        <Footer/>
       </div>
     );
   }
