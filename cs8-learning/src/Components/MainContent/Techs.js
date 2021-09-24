@@ -26,7 +26,7 @@ const Techs = () => {
         if(info){
             content =
                 <div>
-            <div className="tech-list">
+                <div className="tech-list">
                 <center>
                     <Link to='/react'>
                     <button className='tech-button'>

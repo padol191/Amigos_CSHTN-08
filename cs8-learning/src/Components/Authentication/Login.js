@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../HomeUI/Navbar';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import { useState } from 'react';
@@ -57,8 +56,7 @@ const Login=()=> {
     }
 
     return (
-    <React.Fragment> 
-    <div><Navbar/></div>  
+    <React.Fragment>  
     <form onSubmit={dataHandler}> 
     <div className="login-form">
         <div className="container">

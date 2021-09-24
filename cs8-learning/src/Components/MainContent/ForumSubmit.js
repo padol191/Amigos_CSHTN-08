@@ -1,6 +1,7 @@
 import './ForumSubmit.css';
 import { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const ForumSubmit = () =>{
 
@@ -59,9 +60,12 @@ const ForumSubmit = () =>{
                 <div className="description">
                     <textarea className="description-ta" value={comment} placeholder="Description goes here " onChange={CommentChangeHandler}/>
                     <br/>
+                    
                     <button type='submit' className="topic-submit">
                     Submit
                     </button>
+                    
+                    <button className="cancel-btn">Cancel</button>
                 </div>
                 
             </div>

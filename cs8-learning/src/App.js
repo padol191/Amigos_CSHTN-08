@@ -1,4 +1,4 @@
-
+import './App.css';
 import React from 'react';
 import Login from './Components/Authentication/Login';
 import SignUp from './Components/Authentication/SignUp';
@@ -15,6 +15,8 @@ import ForumDiscussion from './Components/MainContent/ForumDiscussion';
 import ForumSubmit from './Components/MainContent/ForumSubmit';
 
 import {Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
+import Navbar from './Components/HomeUI/Navbar';
+import Footer from './Components/HomeUI/Footer';
 
 
 
@@ -28,7 +30,7 @@ function App() {
     <React.Fragment>
      <div className="auth">
       
-      
+     <Navbar />
         <Switch>
           <Route path= "/" exact component={Home}/>
           <Route path= "/signup" component={SignUp}/>
@@ -46,6 +48,8 @@ function App() {
 
           <Redirect to="/"/>
         </Switch>
+  
+        <Footer />
       
   
     </div>

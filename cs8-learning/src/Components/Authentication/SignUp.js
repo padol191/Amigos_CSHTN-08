@@ -1,7 +1,6 @@
 import React from 'react';
 import './Signup.css';
-import Navbar from '../HomeUI/Navbar';
-import Techs from '../MainContent/Techs';
+
 import { useState,useHistory ,useEffect } from 'react';
 import { Link, Redirect ,BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
@@ -122,9 +121,7 @@ const SignUp=()=> {
 
       
     return (
-    
     <div>
-        <Navbar/>
         <form onSubmit={dataHandler}>
         <div className="signup-form">
             <div className="container">
