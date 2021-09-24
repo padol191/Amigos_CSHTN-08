@@ -2,6 +2,9 @@ import axios from 'axios';
 import './Techs.css';
 import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
+// import withAuth from '../Authentication/withAuth';
+
+
 const Techs = () => {
 
     const[info,setData] = useState('')

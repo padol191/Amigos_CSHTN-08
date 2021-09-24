@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../HomeUI/Navbar';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import { useState } from 'react';
