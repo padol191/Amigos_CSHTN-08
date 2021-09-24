@@ -7,8 +7,9 @@ import {FaAngleDoubleUp, FaComments} from 'react-icons/fa';
 
 const Forum = () => {
 
-    let content= null;
-    const[info,setData] = useState([]);
+    
+    const[info,setData] = useState(null);
+    const[loading,setLoading] = useState(true);
     
 
     const get_post_url='http://localhost:5000/api/post/';
@@ -16,8 +17,8 @@ const Forum = () => {
     const token= localStorage.getItem("token")
     
     useEffect(()=>{
-    const response = async ()=> {
-        await axios.get(get_post_url,
+    
+        axios.get(get_post_url,
     {
         headers: 
         {
@@ -25,17 +26,26 @@ const Forum = () => {
         }
     })
 
-    .then( (res)=>{
-        console.log(res.data);
-         setData(res.data);
-        console.log(info);
-        let demo= res.data;
-        console.log(demo);
+    .then((res)=>{
+        setTimeout(() => {
+            setData(res.data);
+            console.log(info);
+            let demo= res.data;
+            console.log(demo);
+            setLoading(false)   
+        }, 1000);
+        // console.log(res.data);
+        
+        
         }
     )
-    .catch(err=>console.log(err))}
+    .catch(err=>console.log(err))
 
 },[get_post_url]);
+
+
+
+
 
 const  ForumBlocks= (props) => {
             
@@ -104,7 +114,7 @@ const  ForumBlocks= (props) => {
                 </Link>
             </div>
             <div>
-           { info && info.map((data,index) =>{ (<ForumBlocks title1= {data[index].title} desc={data[index].name} />  )  })}
+           { info && info.map((data,index) =>{ (<ForumBlocks title1= {data[index]?.title} desc={data[index]?.name} />  )  })}
            </div>
         </div>
         </div>

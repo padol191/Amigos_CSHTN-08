@@ -17,6 +17,7 @@ import { ReactDOM } from "react-dom";
 import "./App.css";
 import Navbar from "./Components/HomeUI/Navbar";
 import Footer from "./Components/HomeUI/Footer";
+import ForumSubmit from "./Components/MainContent/ForumSubmit";
 
 function App() {
   const value = localStorage.getItem("logininfo");
@@ -24,10 +25,13 @@ function App() {
     <BrowserRouter>
       <React.Fragment>
         <div className="auth">
+          <Navbar/>
           <Switch>
             <Route path="/" exact component={Home} />
-            <SignRoute path="/signup" component={SignUp} isLoggedin={value} />
-            <SignRoute path="/login" component={Login} isLoggedin={value} />
+            <Route path="/signup" component={SignUp} isLoggedin={value} />
+            <Route path="/login" component={Login} isLoggedin={value} />
+            <Route path="/create" component={ForumSubmit} isLoggedin={value} />
+
             <ProtectedRoute
               path="/techs"
               component={Techs}
@@ -63,29 +67,11 @@ function App() {
             <Redirect to="/" />
           </Switch>
         </div>
-      </React.Fragment>
-      <React.Fragment>
-        <div className="auth">
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/login" component={Login} />
-            <Route path="/techs" component={Techs} />
-            <Route path="/forums" component={Forum} />
-            <Route path="/react" component={ReactInfo} />
-            <Route path="/express" component={Express} />
-            <Route path="/git" component={Gits} />
-            <Route path="/nodejs" component={NodejsInfo} />
-            <Route path="/databases" component={DatabasesInfo} />
-            <Route path="/ruby" component={Ruby} />
-            <Redirect to="/" />
-          </Switch>
+        <Footer />
 
-          <Footer />
-        </div>
       </React.Fragment>
-    </BrowserRouter>
+      
+  </BrowserRouter>
   );
 }
 
