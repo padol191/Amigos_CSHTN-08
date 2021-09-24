@@ -13,8 +13,9 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    min-height: 30vmin;
+    min-height: 38vmin;
     margin: auto;
+    margin-top: 40px;
     border-radius: 3px;
     box-shadow: inset 0px 1px 5px rgb(194, 194, 194);
 }
