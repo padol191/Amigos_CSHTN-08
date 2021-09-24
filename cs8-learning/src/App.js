@@ -11,6 +11,8 @@ import Express from './Components/Subjects/Express';
 import Gits from './Components/Subjects/GitInfo';
 import NodejsInfo from './Components/Subjects/NodejsInfo';
 import Ruby from './Components/Subjects/Ruby';
+import ForumDiscussion from './Components/MainContent/ForumDiscussion';
+import ForumSubmit from './Components/MainContent/ForumSubmit';
 
 import {Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
 
@@ -39,6 +41,9 @@ function App() {
           <Route path= "/nodejs" component={NodejsInfo}/>
           <Route path= "/databases" component={DatabasesInfo}/>
           <Route path= "/ruby" component={Ruby}/>
+          <Route path= "/discussions" component={ForumDiscussion}/>
+          <Route path= "/create" component={ForumSubmit}/>
+
           <Redirect to="/"/>
         </Switch>
       

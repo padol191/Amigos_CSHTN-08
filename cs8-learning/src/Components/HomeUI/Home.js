@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './Navbar';
+import Info from '../../Info';
 import { Link } from 'react-router-dom';
 
 const Home=()=> {
@@ -13,6 +14,7 @@ const Home=()=> {
         <Link to="/signup">
         <button className="sign-up">Sign Up</button>
         </Link>
+        <Info/>
       
       </div>
     );

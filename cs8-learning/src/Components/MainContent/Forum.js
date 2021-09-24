@@ -1,4 +1,5 @@
 import './Forum.css';
+import { Link } from 'react-router-dom';
 import {FaAngleDoubleUp, FaComments} from 'react-icons/fa';
 const Forum = () => {
     
@@ -7,8 +8,10 @@ const Forum = () => {
         <div className="forum">
             
             <div className="heading">
-                <h1>Forums</h1>   
+                <h1>Forums</h1>
+                <Link to='/create'>   
                 <button >Create Discussion</button>
+                </Link>
             </div>
             
 

@@ -1,9 +1,15 @@
 import {FaComments,FaAngleDoubleUp,FaEye} from 'react-icons/fa';
-import './ForumDiscussion.css'
+import './ForumDiscussion.css';
+import Navbar from '../HomeUI/Navbar';
+import React from 'react';
+
 
 const ForumDiscussion = () => {
-    return ( 
+    
+    return (
+        <React.Fragment>
         <div className="forum-discussion">
+            <Navbar/>
             <h1>
                 Discussions
             </h1>
@@ -64,15 +70,14 @@ const ForumDiscussion = () => {
                         <p>99</p>
                     </button>
                     <div className="fd-answer">
-                    <textarea className='fd-tacomments' placeholder ="Type your Comment here!"/>
+                    
                     <br />
-                    <button className="fd-submit">
-                        Submit
-                    </button>
+                   
                     </div>    
                 </div>
             </div>
         </div>
+        </React.Fragment> 
      );
 }
  

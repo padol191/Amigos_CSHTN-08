@@ -1,4 +1,5 @@
 import Icon from './icon';
+
 const Info = () =>{
     return(
             <div>

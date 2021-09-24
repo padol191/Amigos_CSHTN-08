@@ -22,17 +22,24 @@ const SignUp=()=> {
     useEffect(() => {
       const value= localStorage.getItem("logininfo")
       if(value==='1'){
-        setUser(true)
+        setUser(true);
+      }
+      else{
+        setUser(false);
       }
       
       
     }, [])
 
-    function LoginChangeHandler(){
-     localStorage.setItem("logininfo", 1);
-     setUser(true);
-
-      
+     function LoginChangeHandler(){
+      setTimeout(() =>
+       {
+        if(user)
+        {
+        <Redirect to="/"/>
+        }
+  
+        }, 1000);
       }
       
     
@@ -73,6 +80,8 @@ const SignUp=()=> {
   .then(res=>{
     console.log(res.data);
     console.log(res.data.token);
+    let token= res.data.token
+    localStorage.setItem("token",token)
     
 
     const body = {
@@ -89,7 +98,8 @@ const SignUp=()=> {
       const demo=res2.data;
       console.log(demo);
        const id =demo[Object.keys(demo)[0]];
-       window.localStorage.setItem('id', id);
+       localStorage.setItem("id", id);
+       localStorage.setItem("logininfo", 1);
        setUser(true);
       
       
