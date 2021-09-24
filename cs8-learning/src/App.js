@@ -1,4 +1,4 @@
-
+import './App.css';
 import React from 'react';
 import Login from './Components/Authentication/Login';
 import SignUp from './Components/Authentication/SignUp';
