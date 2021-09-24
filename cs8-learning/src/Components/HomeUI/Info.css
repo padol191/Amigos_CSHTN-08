@@ -1,0 +1,32 @@
+.home-page{
+    width: 70%;
+    margin: auto;
+}
+
+.name-motto{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vmin;
+    margin: auto;
+}
+
+.name-motto hr{
+    margin-top: 5%;
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.name-motto h3{
+    color: #F5CD78;
+    font-weight: 300;
+}
+
+.about-us h2{
+    margin-bottom: 20px;
+}
+
+.about-us p{
+    margin-bottom: 20px;
+}
