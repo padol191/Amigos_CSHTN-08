@@ -1,28 +1,38 @@
-import Quiz from './Quiz';
-import './SubtopicDetails.css';
+import Quiz from "./Quiz";
+import "./SubtopicDetails.css";
 
-const SubtopicDetails = () => {
-    return ( 
-        <div>
-            <div className='subtopic-details'>
-                <h1>Subtopic Title</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda unde obcaecati aliquam, vero itaque maxime qui reiciendis id porro ipsum tempore quae consequatur veritatis nostrum facere, ut commodi corporis nisi.
-                </p>
-                <img src="https://blog.jetbrains.com/wp-content/uploads/2018/05/webstorm-jsx-tree-highlighting.png" alt="" />
-                <div className='additional-resources'>
-                    <h2>Addition Resources</h2>
-                    <a href="">Link #1</a>
-                    <a href="">Link #2</a>
-                    <a href="">Link #3</a>
-                    <a href="">Link #4</a>
-                    <a href="">Link #5</a>
-                </div>
-                <h1>Test Your Knowledge</h1>
-            </div>
-            <Quiz />
+const SubtopicDetails = (props) => {
+  const { id, data } = props.location.state;
+  const SubTop = (props) => {
+    return (
+      <div>
+        <div className="subtopic-details">
+          <h1>{props.title}</h1>
+          <p>{props.body}</p>
+          <img src={props.img} alt="" />
+          <div className="additional-resources">
+            <h2>Addition Resources</h2>
+            <a href={props.link}>Click</a>
+          </div>
+          <h1>Test Your Knowledge</h1>
         </div>
-     );
-}
- 
+        <Quiz />
+      </div>
+    );
+  };
+  return (
+    data &&
+    data.map((data) => {
+      return (
+        <SubTop
+          title={data.title}
+          body={data.body}
+          img={data}
+          link={data.links[0]}
+        />
+      );
+    })
+  );
+};
+
 export default SubtopicDetails;
