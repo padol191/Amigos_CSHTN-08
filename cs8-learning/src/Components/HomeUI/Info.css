@@ -1,0 +1,47 @@
+.home-page{
+    width: 70%;
+    margin: auto;
+}
+
+.home-flex{
+    display: flex;
+    align-items: center;
+}
+.name-motto{
+    background-color: #f2f2f27e;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    min-height: 38vmin;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 3px;
+    box-shadow: inset 0px 1px 5px rgb(194, 194, 194);
+}
+
+.name-motto hr{
+    margin-top: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.name-motto h1{
+    font-size: 300%;
+}
+.name-motto h3{
+    color: #F5CD78;
+    font-weight: 500;
+}
+
+.about-us h2{
+    margin-bottom: 20px;
+    font-size: 200%;
+}
+
+.about-us{
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}

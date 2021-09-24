@@ -96,7 +96,6 @@ const SignUp = () => {
 
   return (
     <div>
-      <Navbar />
       <form onSubmit={dataHandler}>
         <div className="signup-form">
           <div className="container">

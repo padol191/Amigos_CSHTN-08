@@ -57,8 +57,7 @@ const Login=()=> {
     }
 
     return (
-    <React.Fragment> 
-    <div><Navbar/></div>  
+    <React.Fragment>  
     <form onSubmit={dataHandler}> 
     <div className="login-form">
         <div className="container">

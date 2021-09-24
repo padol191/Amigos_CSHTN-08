@@ -8,7 +8,7 @@ const Forum = () => {
             
             <div className="heading">
                 <h1>Forums</h1>   
-                <button >Create Discussion</button>
+                <button>Create Discussion</button>
             </div>
             
 
