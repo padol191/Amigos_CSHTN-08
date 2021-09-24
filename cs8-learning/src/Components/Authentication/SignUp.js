@@ -60,7 +60,7 @@ const SignUp = () => {
       password: password,
       cpassword: cpassword,
     };
-
+    
     axios
       .post(REGISTER_URL, data)
       .then((res) => {
@@ -88,6 +88,9 @@ const SignUp = () => {
           });
       })
       .catch((err) => console.log(err.data));
+
+
+
 
     setName("");
     setEmail("");
