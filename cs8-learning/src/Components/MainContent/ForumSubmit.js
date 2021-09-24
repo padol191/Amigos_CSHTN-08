@@ -64,7 +64,7 @@ const ForumSubmit = () => {
             <br />
 
             <Link to="/forums">
-              <button type="submit" className="topic-submit"></button>
+              <button type="submit" className="topic-submit">Submit</button>
             </Link>
 
             <button className="cancel-btn">Cancel</button>

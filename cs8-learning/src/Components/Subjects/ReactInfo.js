@@ -2,6 +2,9 @@ import React from 'react'
 import '../MainContent/Subtopic.css';
 
 function ReactInfo() {
+
+
+    
     return (
         <div>
             <div className='subtopic-main'>

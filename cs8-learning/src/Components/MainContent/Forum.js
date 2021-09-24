@@ -75,25 +75,7 @@ const Forum = () => {
     );
   };
 
-  // if(info){
-
-  //     return (
-  //         content =
-  //     <div className="forum">
-
-  //         <div className="heading">
-  //             <h1>Forums</h1>
-  //             <Link to='/create'>
-  //             <button >Create Discussion</button>
-  //             </Link>
-  //         </div>
-  //         <div>
-  //        { info.forEach((data,i) =>{ (<ForumBlocks title= {data[i].title} desc={data[i].name} />  )  })}
-  //        </div>
-  //     </div>
-
-  //     )
-  // }
+  
 
   let iconStyles = { color: "black" };
   return (
