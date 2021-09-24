@@ -61,38 +61,32 @@ router.get("/:id", async (req, res) => {
 });
 
 router.put("/completed/:id", auth, checkObjectId("id"), async (req, res) => {
-  const topic = await Topic.aggregate(
-    { $unwind: "$subTopics" },
-    { $match: { "subTopics.id": req.params.id } },
-    { $project: { "subTopics.completed": 1 } },
-    { $group: { _id: "$subTopic" } }
-  );
-
-  console.log(topic);
-  res.send(topic);
-
-  // try {
-  //   const topic = await Topic.findById(req.params.id);
-  //   console.log(topic.subTopic[1]);
-  //   // Check if the post has already been liked
-  //   if (
-  //     topic.subTopic[1].completed.some(
-  //       (completed) => completed.user.toString() === req.user.id
-  //     )
-  //   ) {
-  //     return res.status(400).json({ msg: "subtopic already done" });
-  //   }
-
-  //   topic.subTopic[1].completed.unshift({
-  //     user: req.user.id,
-  //   });
-
-  //   await topic.save();
-
-  //   return res.json(topic.subTopic[1].completed);
-  // } catch (err) {
-  //   console.error(err.message);
-  //   res.status(500).send("Server Error");
-  // }
+  const topic = await Topic.findOne({ "subTopic.id": req.params.id });
+  try {
+    topic.subTopic.forEach(async (subtop) => {
+      console.log(subtop.id);
+      if (subtop.id == req.params.id) {
+        console.log("going in");
+        if (
+          subtop.completed.some(
+            (completed) => completed.user.toString() === req.user.id
+          )
+        ) {
+          return res.status(400).json({
+            msg: "subtopic already done",
+            completed: subtop.completed,
+          });
+        } else {
+          subtop.completed.unshift({ user: req.user.id });
+          console.log(subtop.completed);
+          await topic.save();
+          return res.json(subtop.completed);
+        }
+      }
+    });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
 });
 module.exports = router;
