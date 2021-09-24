@@ -44,6 +44,7 @@ const Quiz = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
+	const [disable, setDisable] = useState(false);
     const [answer,setAnswer] = useState('');
 	const [correct, setCorrect] = useState('');
 
@@ -52,6 +53,7 @@ const Quiz = () => {
 			setScore(score + 1);
             setAnswer("Correct!")
 			setCorrect('');
+			setDisable(true);
 		}
         else{
             let correct_ans = '';
@@ -72,11 +74,14 @@ const Quiz = () => {
         setCurrentQuestion(0)
         setShowScore(false);
         setAnswer('');
+		setDisable(false);
     };
     const handleNextOption = () =>{
-        const nextQuestion = currentQuestion + 1;
+
         setAnswer('');
 		setCorrect('');
+		setDisable(false)
+		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else {
@@ -108,7 +113,7 @@ const Quiz = () => {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button className="quiz-btn" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							<button disabled={disable} className="quiz-btn" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</>
