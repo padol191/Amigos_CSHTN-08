@@ -3,6 +3,7 @@ import React from 'react';
 import Login from './Components/Authentication/Login';
 import SignUp from './Components/Authentication/SignUp';
 import Home from './Components/HomeUI/Home';
+import Footer from './Components/HomeUI/Footer'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
@@ -19,6 +20,7 @@ function App() {
             <Route path= "/login" exact component={Login}/>
           </Switch>
         </Router>
+        <Footer />
       </div>
       );
   }
