@@ -17,6 +17,7 @@ const ForumSubmit = () =>{
                     <button className="topic-submit">
                     Submit
                     </button>
+                    <button className="cancel-btn">Cancel</button>
                 </div>
                 
             </div>
