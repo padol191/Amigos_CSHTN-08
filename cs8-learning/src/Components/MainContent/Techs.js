@@ -26,8 +26,7 @@ const Techs = () => {
         if(info){
             content =
                 <div>
-                <div className="tech-list">
-                <center>
+            <div className="tech-list">
                     <Link to='/react'>
                     <button className='tech-button'>
                     {info[0].name}
@@ -62,9 +61,7 @@ const Techs = () => {
                     <button className='tech-button'>
                     Node JS
                     </button>
-                    </Link>
-                    
-                </center>    
+                    </Link>    
             </div>
             <center>
                 <div className="tech-list">
