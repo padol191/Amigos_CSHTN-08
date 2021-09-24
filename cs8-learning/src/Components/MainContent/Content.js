@@ -1,4 +1,5 @@
 import './Content.css';
+import Techs from './Techs';
 const Content = () => {
     
     return (
@@ -8,7 +9,8 @@ const Content = () => {
                 <p>A brief descritption about why we chose the subjects we chose.
                 A brief descritption about why we chose the subjects we chose.
                 A brief descritption about why we chose the subjects we chose.
-                </p>           
+                </p>  
+                <Techs />         
             </div> 
         </div> 
         
