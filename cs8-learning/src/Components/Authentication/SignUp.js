@@ -1,28 +1,45 @@
 import React from 'react';
 import './Signup.css';
 import Navbar from '../HomeUI/Navbar';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Techs from '../MainContent/Techs';
+import { useState,useHistory ,useEffect } from 'react';
+import { Link, Redirect ,BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
+
 
 const REGISTER_URL='http://localhost:5000/api/users/';
 const LOG_URL='http://localhost:5000/api/auth/';
 
 const SignUp=()=> {
-
+    
     const [name, setName]= useState('');
     const [email, setEmail]= useState('');
     const [password, setPassword]= useState('');
     const [cpassword, setcPassword]= useState('');
-    const [keyInLocal, setKey]= useState('false');
-
-    const LoginChangeHandler = ()=>{
-      setKey('true');
+    const [user, setUser]= useState(false);
+    
+    
+    useEffect(() => {
+      const value= localStorage.getItem("logininfo")
+      if(value==='1'){
+        setUser(true)
+      }
       
-    };
+      
+    }, [])
+
+    function LoginChangeHandler(){
+     localStorage.setItem("logininfo", 1);
+     setUser(true);
+
+      
+      }
+      
+    
 
     const NameChangeHandler = (event)=>{
         setName(event.target.value);
+        
         
       };
 
@@ -42,6 +59,7 @@ const SignUp=()=> {
       }
     const dataHandler=(event)=>{
         event.preventDefault();
+      
     const data=
     {
         name: name,
@@ -50,7 +68,7 @@ const SignUp=()=> {
         cpassword: cpassword
     };
    
-    console.log(data);
+    
   axios.post( REGISTER_URL,data)
   .then(res=>{
     console.log(res.data);
@@ -72,11 +90,17 @@ const SignUp=()=> {
       console.log(demo);
        const id =demo[Object.keys(demo)[0]];
        window.localStorage.setItem('id', id);
+       setUser(true);
+      
+      
       })
+      
     
   
   })
   .catch(err=>console.log(err.data))
+
+  
   
  
   setName('');
@@ -88,6 +112,7 @@ const SignUp=()=> {
 
       
     return (
+    
     <div>
         <Navbar/>
         <form onSubmit={dataHandler}>
@@ -98,7 +123,7 @@ const SignUp=()=> {
                 <input type="email" required placeholder="Email" value ={email}onChange={EmailChangeHandler}/>
                 <input type="password" required placeholder="Password (at least 6 characters)" value={password} onChange={PasswordChangeHandler}/>
                 <input type="password" required placeholder="Confirm Password" value={cpassword} onChange={CPasswordChangeHandler} />
-                <button type='submit'>Sign Up</button>
+                <button type='submit' onClick={LoginChangeHandler}>Sign Up</button>
                 <div className="member-link">
                   <Link to ='/login'>
                     <a>Already a member?</a>
@@ -109,7 +134,9 @@ const SignUp=()=> {
             
         </div>
         </form>
+        {/* <ProtectedRoute path='/techs' component ={Techs} isAuth={user}  /> */}
     </div>
+    
     );
   }
   

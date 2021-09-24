@@ -1,27 +1,66 @@
+import axios from 'axios';
 import './Techs.css';
+import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const Techs = () => {
-    return (
-        <div>
+
+    const[info,setData] = useState('')
+    let content=null;
+    
+    const topic_URL='http://localhost:5000/api/topic/';
+    
+    useEffect(()=>{
+        axios.get(topic_URL)    
+        .then(res2=>{
+        console.log(res2.data.topic)
+        setData(res2.data.topic);
+                  
+        })
+        .catch(err=>console.log(err))},[]);
+
+        
+
+        if(info){
+            content =
+                <div>
             <div className="tech-list">
                 <center>
+                    <Link to='/react'>
                     <button className='tech-button'>
-                    HTML + CSS
+                    {info[0].name}
                     </button>
+                    </Link>
+
+                    <Link to='/express'>
                     <button className='tech-button'>
-                    JAVASCRIPT
+                    {info[1].name}
                     </button>
+                    </Link>
+
+                    <Link to='/git'>
                     <button className='tech-button'>
                     GIT
                     </button>
+                    </Link>
+
+                    <Link to='/databases'>
                     <button className='tech-button'>
                     DATABASES
                     </button>
+                    </Link>
+
+                    <Link to='/ruby'>
                     <button className='tech-button'>
                     RUBY
                     </button>
+                    </Link>
+
+                    <Link to='/nodejs'>
                     <button className='tech-button'>
                     NODEJS
                     </button>
+                    </Link>
+                    
                 </center>    
             </div>
             <center>
@@ -34,8 +73,16 @@ const Techs = () => {
             
         </div>
         
+             }        
+
+    return (
+        <div>
+            {content}
+
+        </div>
         
-     );
+        
+     )
 }
  
 export default Techs;

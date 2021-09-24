@@ -3,32 +3,48 @@ import React from 'react';
 import Login from './Components/Authentication/Login';
 import SignUp from './Components/Authentication/SignUp';
 import Home from './Components/HomeUI/Home';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Techs from './Components/MainContent/Techs';
+import Forum from './Components/MainContent/Forum';
+import ReactInfo from './Components/Subjects/ReactInfo';
+import DatabasesInfo from './Components/Subjects/DatabasesInfo';
+import Express from './Components/Subjects/Express';
+import Gits from './Components/Subjects/GitInfo';
+import NodejsInfo from './Components/Subjects/NodejsInfo';
+import Ruby from './Components/Subjects/Ruby';
+
+import {Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
 
 
 
 
 function App() {
-  const ReactRouter=()=>{
-    return(
-    <div className="auth">
-        <Router>
-          <Switch>
-            <Route path= "/" exact component={Home}/>
-            <Route path= "/signup" exact component={SignUp}/>
-            <Route path= "/login" exact component={Login}/>
-          </Switch>
-        </Router>
-      </div>
-      );
-  }
   
+    
   return (
-
+    <BrowserRouter>
     <React.Fragment>
-     <ReactRouter/>
+     <div className="auth">
+      
+      
+        <Switch>
+          <Route path= "/" exact component={Home}/>
+          <Route path= "/signup" component={SignUp}/>
+          <Route path= "/login" component={Login}/>
+          <Route path= "/techs"  component={Techs}/>
+          <Route path= "/forums" component={Forum}/>
+          <Route path= "/react" component={ReactInfo}/>
+          <Route path= "/express" component={Express}/>
+          <Route path= "/git" component={Gits}/>
+          <Route path= "/nodejs" component={NodejsInfo}/>
+          <Route path= "/databases" component={DatabasesInfo}/>
+          <Route path= "/ruby" component={Ruby}/>
+          <Redirect to="/"/>
+        </Switch>
+      
+  
+    </div>
     </React.Fragment>
-       
+    </BrowserRouter>
   
   );
 }
