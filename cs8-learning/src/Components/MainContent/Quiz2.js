@@ -1,25 +1,8 @@
 import { useState } from "react";
+import { FaSketch } from "react-icons/fa";
 import './Quiz.css';
-const Quiz = () => {
+const Quiz2 = () => {
     const questions = [
-		{
-			questionText: 'Which type of indexes does MongoDB support?',
-			answerOptions: [
-				{ answerText: 'Compound Indexes', isCorrect: false },
-				{ answerText: 'Multikey Indexes', isCorrect: false },
-				{ answerText: 'Geospatial Indexes', isCorrect: false },
-				{ answerText: 'All of the above', isCorrect: true },
-			],
-		},
-		{
-			questionText: ' Which is the default mode in which the explain() command runs?',
-			answerOptions: [
-				{ answerText: 'allPlansExecution', isCorrect: false },
-				{ answerText: 'executionStats', isCorrect: false},
-				{ answerText: 'queryPlanner', isCorrect: true },
-				{ answerText: 'customExecutionStats', isCorrect: false },
-			],
-		},
 		{
 			questionText: 'Which of the following command is used to install the Node.js express module?',
 			answerOptions: [
@@ -36,6 +19,33 @@ const Quiz = () => {
 				{ answerText: 'dgram', isCorrect: false },
 				{ answerText: 'fsread', isCorrect: true },
 				{ answerText: 'zlib', isCorrect: false },
+			],
+		},
+		{
+			questionText: 'What does the fs module stand for?',
+			answerOptions: [
+				{ answerText: 'File Store', isCorrect: false },
+				{ answerText: 'File Sharing', isCorrect: false },
+				{ answerText: 'File Service', isCorrect: false },
+				{ answerText: 'File System', isCorrect: true },
+			],
+		},
+		{
+			questionText: 'What is the default scope in the Node.js application?',
+			answerOptions: [
+				{ answerText: 'Global function', isCorrect: false },
+				{ answerText: 'Local to object', isCorrect: false },
+				{ answerText: 'Global', isCorrect: false },
+				{ answerText: 'Local', isCorrect: true },
+			],
+		},
+        {
+			questionText: 'Which of the following tool is used to automate the various tasks of the Node.js application?',
+			answerOptions: [
+				{ answerText: 'NPM', isCorrect: false },
+				{ answerText: 'Express.js', isCorrect: false },
+				{ answerText: 'Grunt.js', isCorrect: true },
+				{ answerText: 'None of the above', isCorrect: false },
 			],
 		},
 	];
@@ -58,7 +68,7 @@ const Quiz = () => {
 		}
         else{
             let correct_ans = '';
-            for(let i = 0; i < 4; i++){
+            for(let i = 0; i < 5; i++){
                 if(questions[currentQuestion].answerOptions[i].isCorrect){
                     correct_ans = questions[currentQuestion].answerOptions[i].answerText;
 					setAnswer("Wrong");
@@ -125,4 +135,4 @@ const Quiz = () => {
     );
 }
  
-export default Quiz;
+export default Quiz2;

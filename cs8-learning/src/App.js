@@ -22,6 +22,7 @@ import MongoSubtopicDetails1 from "./Components/Subjects/Mongo-subtop1";
 import Navbar from "./Components/HomeUI/Navbar";
 import Footer from "./Components/HomeUI/Footer";
 import ForumSubmit from "./Components/MainContent/ForumSubmit";
+import CommentDiscussions from "./Components/MainContent/CommentDiscussions";
 
 function App() {
   const value = localStorage.getItem("logininfo");
@@ -35,10 +36,16 @@ function App() {
             <Route path="/signup" component={SignUp} isLoggedin={value} />
             <Route path="/login" component={Login} isLoggedin={value} />
             <Route path="/create" component={ForumSubmit} isLoggedin={value} />
+            
 
             <ProtectedRoute
               path="/techs"
               component={Techs}
+              isLoggedin={value}
+            />
+            <ProtectedRoute
+              path="/comments"
+              component={CommentDiscussions}
               isLoggedin={value}
             />
             <ProtectedRoute
