@@ -17,6 +17,7 @@ import { ReactDOM } from "react-dom";
 import "./App.css";
 import Navbar from "./Components/HomeUI/Navbar";
 import Footer from "./Components/HomeUI/Footer";
+import ForumSubmit from "./Components/MainContent/ForumSubmit";
 
 function App() {
   const value = localStorage.getItem("logininfo");
@@ -24,11 +25,14 @@ function App() {
     <BrowserRouter>
       <React.Fragment>
         <div className="auth">
+          <Navbar/>
           <Switch>
             
             <Route path="/" exact component={Home} />
-            <SignRoute path="/signup" component={SignUp} isLoggedin={value} />
-            <SignRoute path="/login" component={Login} isLoggedin={value} />
+            <Route path="/signup" component={SignUp} isLoggedin={value} />
+            <Route path="/login" component={Login} isLoggedin={value} />
+            <Route path="/create" component={ForumSubmit} isLoggedin={value} />
+
             <ProtectedRoute
               path="/techs"
               component={Techs}
@@ -66,7 +70,8 @@ function App() {
           <Footer />
         </div>
       </React.Fragment>
-    </BrowserRouter>
+      
+  </BrowserRouter>
   );
 }
 

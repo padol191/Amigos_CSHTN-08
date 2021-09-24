@@ -41,25 +41,25 @@ const Techs = () => {
 
                     <Link to='/git'>
                     <button className='tech-button'>
-                    GIT
+                    Git
                     </button>
                     </Link>
 
                     <Link to='/databases'>
                     <button className='tech-button'>
-                    DATABASES
+                    Mongo
                     </button>
                     </Link>
 
                     <Link to='/ruby'>
                     <button className='tech-button'>
-                    RUBY
+                    Django
                     </button>
                     </Link>
 
                     <Link to='/nodejs'>
                     <button className='tech-button'>
-                    NODEJS
+                    Node JS
                     </button>
                     </Link>    
             </div>
