@@ -16,6 +16,8 @@ import {Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
 import Navbar from './Components/HomeUI/Navbar';
 import Footer from './Components/HomeUI/Footer';
 
+import Content from './Components/MainContent/Content';
+import Subtopic from './Components/MainContent/Subtopic';
 
 
 
@@ -43,7 +45,6 @@ function App() {
           <Route path= "/ruby" component={Ruby}/>
           <Redirect to="/"/>
         </Switch>
-  
         <Footer />
       
   

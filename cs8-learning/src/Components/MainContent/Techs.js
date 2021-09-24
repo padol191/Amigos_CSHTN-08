@@ -24,7 +24,6 @@ const Techs = () => {
             content =
                 <div>
             <div className="tech-list">
-                <center>
                     <Link to='/react'>
                     <button className='tech-button'>
                     {info[0].name}
@@ -59,9 +58,7 @@ const Techs = () => {
                     <button className='tech-button'>
                     NODEJS
                     </button>
-                    </Link>
-                    
-                </center>    
+                    </Link>    
             </div>
             <center>
                 <div className="tech-list">

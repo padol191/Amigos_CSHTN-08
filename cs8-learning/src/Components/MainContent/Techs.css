@@ -1,13 +1,12 @@
 .tech-list{
-    display: flexbox;
-    justify-content: space-between;
-    padding-top: 5%;
-    max-width: 80%;
+    display: flex;
+    justify-content: space-evenly;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .tech-button {
-    min-width: 250px;
+    width: 250px;
     border-radius: 5px;
     font-size: 36px;
     margin: 10px;
