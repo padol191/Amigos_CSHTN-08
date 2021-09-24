@@ -66,7 +66,7 @@ const SignUp = () => {
       .then((res) => {
         console.log(res.data);
         console.log(res.data.token);
-        window.localStorage.setItem("token", res.data.token)
+        window.localStorage.setItem("token", res.data.token);
         const body = {
           email: email,
           password: password,
@@ -82,7 +82,7 @@ const SignUp = () => {
             const demo = res2.data;
             console.log(demo);
             const id = demo[Object.keys(demo)[0]];
-            
+
             window.localStorage.setItem("id", id);
             setUser(true);
           });
