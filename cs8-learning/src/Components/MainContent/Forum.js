@@ -35,7 +35,7 @@ const Forum = () => {
 
   const ForumBlocks = (props) => {
     return (
-      <div className="forum">
+      <div>
         <div className="forum-list">
           <div className="forum-content">
             <img
