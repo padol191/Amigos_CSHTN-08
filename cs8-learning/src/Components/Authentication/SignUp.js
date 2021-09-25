@@ -99,7 +99,7 @@ const SignUp = () => {
     <div>
       <form onSubmit={dataHandler}>
         <div className="signup-form">
-          <div className="container">
+          <div className="signup-container">
             <h2>Sign Up</h2>
             <input
               type="text"

@@ -21,6 +21,7 @@ import NodeSubtopicDetails1 from "./Components/Subjects/Node-subtop1";
 import MongoSubtopicDetails1 from "./Components/Subjects/Mongo-subtop1";
 import Navbar from "./Components/HomeUI/Navbar";
 import Footer from "./Components/HomeUI/Footer";
+import Coffee from "./Components/HomeUI/Coffee";
 import ForumSubmit from "./Components/MainContent/ForumSubmit";
 import CommentDiscussions from "./Components/MainContent/CommentDiscussions";
 
@@ -31,6 +32,7 @@ function App() {
       <React.Fragment>
         <div className="auth">
           <Navbar />
+          <Coffee />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/signup" component={SignUp} isLoggedin={value} />
