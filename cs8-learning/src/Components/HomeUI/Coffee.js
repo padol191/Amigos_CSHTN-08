@@ -9,7 +9,7 @@ width: fit-content;
 background-color: #f2f2f2;
 font-size: 16px;
 padding: 10px 10px 10px 10px;
-box-shadow: 0px 1px 2px #9c9a91;
+box-shadow: 0px 1px 2px #604f68;
 position : fixed;
 bottom : 5%;
 right : 3%

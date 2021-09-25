@@ -5,7 +5,7 @@
 
 .home-flex{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 .name-motto{
     background-color: #f2f2f27e;
@@ -17,7 +17,7 @@
     margin: auto;
     margin-top: 40px;
     border-radius: 3px;
-    box-shadow: inset 0px 1px 5px rgb(194, 194, 194);
+    box-shadow: inset 0px 1px 5px #604f68a8;
 }
 
 .name-motto hr{
@@ -30,7 +30,7 @@
     font-size: 300%;
 }
 .name-motto h3{
-    color: #F5CD78;
+    color: #C8A5D9;
     font-weight: 500;
 }
 

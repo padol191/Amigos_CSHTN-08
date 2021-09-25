@@ -5,7 +5,7 @@
     margin: auto;
     font-size:xx-large;
     border-radius: 5px;
-    box-shadow: 0px 3px 8px #9c9a91;;
+    box-shadow: 0px 3px 8px #604f68;
     display: flex;
     justify-content: space-evenly;
   }
@@ -26,10 +26,10 @@
     background-color: #fff;
     font-size: 16px;
     padding: 12px;
-    box-shadow: 0px 1px 2px #9c9a91;
+    box-shadow: 0px 1px 2px #604f68;
   }
   .reload:hover{
-    box-shadow: inset 0px 2px 3px #9c9a91;
+    box-shadow: inset 0px 2px 3px #604f68;
   }
   
   /* QUESTION/TIMER/LEFT SECTION */
@@ -64,7 +64,7 @@
     flex-grow: 1;
     border-radius: 3px;
     padding: 5px;
-    color: #DEC362;
+    color: #C8A5D9;
     font-size: 2.6vmin;
 }
 
@@ -107,11 +107,11 @@
     border-radius: 5px;
     margin: auto;
     width: 80%;
-    background-color: #DEC362;
+    background-color: #C8A5D9;
     color: #fff;
     font-size: 3vmin;
     font-weight: 500;
-    box-shadow: 0px 1px 2px #9c9a91;
+    box-shadow: 0px 1px 2px #604f68;
     /* width: 100%;
     font-size: 16px;
     color: #ffffff;
@@ -144,10 +144,10 @@
     border-radius: 5px;
     width: 100%;
     padding: 10px;
-    box-shadow: 0px 1px 2px #9c9a91;
+    box-shadow: 0px 1px 2px #604f68;
   }
   .next-btn-div button:hover{
-    box-shadow: inset 0px 2px 3px #9c9a91;
+    box-shadow: inset 0px 2px 3px #604f68;
   }
 
   .correct {
@@ -159,7 +159,7 @@
   }
   
   .quiz-btn:hover {
-    box-shadow: inset 0px 2px 3px #9c9a91;
+    box-shadow: inset 0px 2px 3px #604f68;
   }
   
   button svg {

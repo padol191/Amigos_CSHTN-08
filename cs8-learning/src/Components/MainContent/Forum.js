@@ -37,10 +37,10 @@ const Forum = () => {
     return (
       <div className="forum">
         <div className="forum-list">
-          <div className="content">
+          <div className="forum-content">
             <img
               src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/43675/white-circle-emoji-clipart-xl.png"
-              width="80px"
+              width="40px"
               style={{ display: "inline", float: "left" }}
               alt=""
             />
@@ -50,13 +50,13 @@ const Forum = () => {
             <p className="author">By {props.name}</p>
             <p style={{ float: "left" }}>{props.desc}</p>
             <br />
+            <div className="forum-button-div">
             <button
               className="forum-button"
-              style={{ marginRight: "5px", marginTop: "10px" }}
             >
               <FaAngleDoubleUp
                 style={{
-                  fontSize: "20px",
+                  fontSize: "12px",
                 }}
               />
               <p>99</p>
@@ -64,11 +64,14 @@ const Forum = () => {
             <button className="forum-button">
               <FaComments
                 style={{
-                  fontSize: "20px",
+                  fontSize: "12px",
                 }}
               />
               <p>99</p>
             </button>
+
+            </div>
+            
           </div>
         </div>
       </div>
